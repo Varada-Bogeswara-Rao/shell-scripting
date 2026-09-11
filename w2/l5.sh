@@ -4,9 +4,8 @@
 ##################
 
 read -r -p "D you want to procced with disk wipe? [y/n]" a
-echo "a="$a""
- if ["$a" =~ [y |Yes ]]; then 
+if [[ "$a" =~ ^([yY]|[yY][eE][sS])$ ]]; then 
 	 echo "Proceeding ..."
- else
+else
 	 echo "abort"
- fi
+fi
